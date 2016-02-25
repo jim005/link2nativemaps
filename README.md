@@ -2,14 +2,14 @@
 Script PHP to redirect to native map apps.
 
 In our website, email, sms... we could forward users to url like this 
-http://maps.appsenso.eu/?q=44.533744,6.471383
+    http://maps.appsenso.eu/?q=44.533744,6.471383
 so on mobile devices they are redirected to their native maps apps. Otherwise, they're redirecting to Google Maps.
 
 # Live demo & webservice
 This script is used here http://maps.appsenso.eu
-Feel free to use it. Exemeple : 
-http://maps.appsenso.eu/?q=44.533744,6.471383
-http://maps.appsenso.eu/?q=place+saint+marcellin,+05000+Gap,+France
+Feel free to use it. Exemples :
+ * http://maps.appsenso.eu/?q=44.533744,6.471383
+ * http://maps.appsenso.eu/?q=place+saint+marcellin,+05000+Gap,+France
 
 
 # Credits & Thanks
