@@ -1,11 +1,10 @@
-<?php 
+<?php
 /**
-/* by: jim007 (websenso.com)
-/* ver: 0.1
-/* date: Feb 2016
-*/
-
-/** 
+ * by: jim007 (websenso.com)
+ * ver: 0.1
+ * date: Feb 2016
+ *
+ * 
  * Implementation looks like : 
  * http://maps.appsenso.eu/?q=44.533744,6.471383
  * 

@@ -12,10 +12,11 @@ Feel free to use it. Exemples :
  * http://maps.appsenso.eu/?q=place+saint+marcellin,+05000+Gap,+France
 
 
+# Install on your server
+    curl -s https://raw.githubusercontent.com/jim005/link2nativemaps/master/index.php > index.php
+
 # Credits & Thanks
-https://github.com/Sjors/currentLocationStringForCurrentLanguage
-https://www.habaneroconsulting.com/insights/opening-native-map-apps-from-the-mobile-browser
-http://jsfiddle.net/johnallan/YkMA2/
-http://www.metamodpro.com/browser-language-codes
-
-
+ * https://github.com/Sjors/currentLocationStringForCurrentLanguage
+ * https://www.habaneroconsulting.com/insights/opening-native-map-apps-from-the-mobile-browser
+ * http://jsfiddle.net/johnallan/YkMA2/
+ * http://www.metamodpro.com/browser-language-codes
