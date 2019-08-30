@@ -34,11 +34,9 @@ elseif (strpos($UserAgent,"Windows Phone")){
     	$url = "maps:" . $destination;
 }
 elseif (strpos($UserAgent,"AppleWebKit")) {
-  	//  $url = "maps:?saddr=" .  urlencode(GetCurrentLocationTranslated()) . "&daddr=" . $destination;
 	$url = "https://maps.apple.com/?q=$lat,$lon&sll=$lat,$lon";
 }
 else {
-   	// $url = "http://maps.google.com?q=" . $destination;
 	$url = "https://www.openstreetmap.org/?mlat=$lat&mlon=$lon#map=17/$lat/$lon"; 
 }
 
