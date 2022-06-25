@@ -39,16 +39,14 @@ if (!isset($_GET['q']) || empty($_GET['q']) ) {
 }
 
 
-
 // Redirect
 $UserAgent = $_SERVER['HTTP_USER_AGENT'];
 if (strpos($UserAgent,"Windows Phone")){
 	$url = "maps:" . $q;
 }
 elseif (strpos($UserAgent,"Android")) {
-	$url = "geo:" . $q;
-	$url .= ($ll) ? "&ll=$ll" : null;
-
+	$url = "https://www.google.com/maps/search/?api=1&query=$q";
+	$url .= ($ll) ? "+$ll" : null;
 }
 elseif (strpos($UserAgent,"AppleWebKit")) {
 	$url = "https://maps.apple.com/?q=$q";
