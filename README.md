@@ -1,13 +1,13 @@
 # link2nativemaps
-Script PHP to redirect to native map apps.
+Script PHP to redirect to native map apps : Apple Maps (apps), Google Maps (apps) or OpenStreetMap.org (web).
 
-In our website, email, sms... we could forward users to url like this 
+On your website, by e-mail, by sms... we could send URL like this : 
     https://maps.appsenso.eu/?q=44.533744,6.471383
-so on mobile devices they are redirected to their native maps apps. Otherwise, they're redirecting to OpenStreetMap.org.
+on mobile device, user will be redirected to their native maps apps. Otherwise, they're redirecting to https://www.OpenStreetMap.org.
 
 # Live demo & webservice
 This script is used here http://maps.appsenso.eu
-Feel free to use it. Exemple :
+Feel free to use it. Example :
  * https://maps.appsenso.eu/?q=44.533744,6.471383 , with q=LATITUDE,LONGITUDE.
 Could be use on http:// or https://  
 
@@ -16,7 +16,4 @@ Could be use on http:// or https://
 
 
 # Credits & Thanks
- * https://github.com/Sjors/currentLocationStringForCurrentLanguage
- * https://www.habaneroconsulting.com/insights/opening-native-map-apps-from-the-mobile-browser
  * http://jsfiddle.net/johnallan/YkMA2/
- * http://www.metamodpro.com/browser-language-codes
