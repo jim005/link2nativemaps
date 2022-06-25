@@ -9,7 +9,7 @@ on mobile device, user will be redirected to their native maps apps. Otherwise, 
 This script is used here https://maps.appsenso.eu
 Feel free to use it. Example :
  * https://maps.appsenso.eu/?q=44.533744,6.471383 , with q=LATITUDE,LONGITUDE.
- * https://maps.appsenso.eu/?q=WebSenso&ll=44.53660,6.303724, with q=QUERY STRING and ll=LATITUDE,LONGITUDE.
+ * https://maps.appsenso.eu/?q=WebSenso&ll=44.545452,6.276119, with q=QUERY STRING and ll=LATITUDE,LONGITUDE.
 
 Could be use on http:// or https://  
 
