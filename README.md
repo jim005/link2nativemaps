@@ -7,7 +7,7 @@ If the user's device is:
 
 Demo : 
  * https://maps.appsenso.eu/?q=44.54535,6.27617 with q=LATITUDE,LONGITUDE.
- * https://maps.appsenso.eu/?q=WebSenso&ll=444.54535,6.27617 with q=QUERY STRING and ll=LATITUDE,LONGITUDE.
+ * https://maps.appsenso.eu/?q=WebSenso&ll=44.54535,6.27617 with q=QUERY STRING and ll=LATITUDE,LONGITUDE.
 
 ## Our instance lives
 This script is hosted here https://maps.appsenso.eu (offered by our web agency www.WebSenso.com).
