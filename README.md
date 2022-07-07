@@ -1,21 +1,20 @@
-# link2nativemaps
-Script PHP to redirect to native map apps : Apple Maps (apps), Google Maps (apps) or OpenStreetMap.org (web).
+Little PHP script to redirect user to native map apps.
 
-On your website, by e-mail, by sms... we could send URL like this : 
-    https://maps.appsenso.eu/?q=44.533744,6.471383
-on mobile device, user will be redirected to their native maps apps. Otherwise, they're redirecting to https://www.OpenStreetMap.org.
+If the user's device is: 
+ * iOS or Mac OS => redirect to Apple Maps (apps),
+ * Android  => redirect to Google Maps (apps)
+ * other => redirect to OpenStreetMap.org (web).
 
-# Live demo & webservice
-This script is used here https://maps.appsenso.eu
-Feel free to use it. Example :
- * https://maps.appsenso.eu/?q=44.533744,6.471383 , with q=LATITUDE,LONGITUDE.
- * https://maps.appsenso.eu/?q=WebSenso&ll=44.545452,6.276119, with q=QUERY STRING and ll=LATITUDE,LONGITUDE.
+Demo : 
+ * https://maps.appsenso.eu/?q=44.54535,6.27617 with q=LATITUDE,LONGITUDE.
+ * https://maps.appsenso.eu/?q=WebSenso&ll=444.54535,6.27617 with q=QUERY STRING and ll=LATITUDE,LONGITUDE.
 
-Could be use on http:// or https://  
+## Our instance lives
+This script is hosted here https://maps.appsenso.eu (offered by our web agency www.WebSenso.com).
+Feel free to use it. Works with http:// and https://  
 
-# Install on your server
+# Install on your own server
     git clone https://github.com/jim005/link2nativemaps.git . 
-
 
 # Credits & Thanks
  * http://jsfiddle.net/johnallan/YkMA2/
