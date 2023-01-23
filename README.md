@@ -1,4 +1,4 @@
-Little PHP script to redirect user to native map apps.
+Little JS script to redirect user to native map apps.
 
 If the user's device is: 
  * iOS or Mac OS => redirect to Apple Maps (apps),
@@ -15,6 +15,3 @@ This script is hosted here https://maps.appsenso.eu (offered by web agency www.W
 # Install on your own server
     git clone https://github.com/jim005/link2nativemaps.git
 Visitors should see /web folder only.
-
-# Credits & Thanks
- * http://jsfiddle.net/johnallan/YkMA2/
