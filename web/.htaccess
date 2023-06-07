@@ -1,0 +1,13 @@
+# New domain name : openstreetmap.link   (2023 June)
+RewriteEngine On
+RewriteBase /
+RewriteCond %{HTTP_HOST} ^maps\.appsenso\.eu$ [NC]
+RewriteRule ^(.*)$ https://www.openstreetmap.link/$1 [R=301,L]
+
+# Force WWW
+RewriteCond %{HTTP_HOST} .
+RewriteCond %{HTTP_HOST} !^www\. [NC]
+RewriteRule ^ http%{ENV:protossl}://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+  
+  
+
