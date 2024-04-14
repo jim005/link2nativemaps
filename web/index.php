@@ -95,4 +95,4 @@ $description = ($lang === "fr") ? "Ouvrez votre lieu dans les applications carto
 <a href="https://maps.apple.com/?q=<?= $q ?>">Redirection...</a>
 
 </body>
-</html>>
+</html>
