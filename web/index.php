@@ -1,6 +1,14 @@
 <?php
 $q = trim($_GET['q']);
 
+$protocol = isset($_SERVER['HTTPS']) && 
+$_SERVER['HTTPS'] === 'on' ? 'https://' : 'http://';
+$base_url = $protocol . $_SERVER['HTTP_HOST'] . '/';
+
+$lang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
+$title = ($lang === "fr") ? "📍C'est par ici !" : "📍It's over here!";
+$description = ($lang === "fr") ? "Ouvrez votre lieu dans les applications cartographiques natives des smartphones, ce qui améliore l'expérience de l'utilisateur et simplifie la navigation." : "Open web-based content to native map apps on smartphones, enhancing user experience and simplifying navigation.";
+
 ?><!DOCTYPE html>
 <html>
 <head>
@@ -11,7 +19,17 @@ $q = trim($_GET['q']);
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta http-equiv = "refresh" content = "5; url = https://maps.apple.com/?q=<?= $q ?>" /> 
-
+	<title><?= $title; ?> - OpenYourMap.link</title>
+    <meta name="description" content="Effortlessly connects your web-based content to native map apps on smartphones, enhancing user experience and simplifying navigation.">
+    <meta property="og:title" content="<?= $title; ?>"> 
+    <meta property="og:site_name" content="OpenYourMap.link">
+    
+    <meta property="og:video" content="<?= $base_url; ?>preview-video.mp4" />
+	<meta property="og:video:secure_url" content="<?= $base_url; ?>preview-video.mp4" />
+	<meta property="og:video:type" content="video.other" />
+	<meta property="og:video:width" content="1920" />
+	<meta property="og:video:height" content="1080" />
+    
 </head>
 <body>
 
@@ -37,6 +55,7 @@ $q = trim($_GET['q']);
             const lon = parseFloat(latLongArray[1]);
             return [lat, lon];
         }
+    
         return false;
     }
 
@@ -52,10 +71,10 @@ $q = trim($_GET['q']);
 
     if (os.indexOf("iPhone") != -1 || os.indexOf("iPad") != -1 || os.indexOf("Mac") != -1) {
         redirectUrl = `https://maps.apple.com/?q=${q}`;
-        redirectUrl += ll ? `&amp;ll=${ll}` : "";
+        redirectUrl += ll ? `&ll=${ll}` : "";
     } else if (os.indexOf("Android") != -1 || os.indexOf("Linux") != -1) {
         redirectUrl = `https://www.google.com/maps/search/?api=1&query=${q}`;
-        redirectUrl += ll ? `&amp;center=${ll}` : "";
+        redirectUrl += ll ? `&center=${ll}` : "";
     } else {
         redirectUrl = "https://www.qwant.com/maps/place/latlon:";
         if (ll) {
@@ -64,12 +83,12 @@ $q = trim($_GET['q']);
             latLongArray = getLatLong(q);
         }
         if (latLongArray) {
-            redirectUrl += `${latLongArray[0]}:${latLongArray[1]}`;
+            redirectUrl += `${latLongArray[0].toFixed(5)}:${latLongArray[1].toFixed(5)}`;
         }
     }
 
-     window.location.href = redirectUrl;
-	// document.write(redirectUrl);
+    window.location.href = redirectUrl;
+	//document.write(redirectUrl);
 
 	setTimeout(window.close, 3000);  // Fix for Apple Map on native app
 

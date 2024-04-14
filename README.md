@@ -6,8 +6,8 @@ If the user's device is:
  * other => redirect to Qwant Maps (OpenStreetMap data) (web).
 
 ## Demo : 
- * https://www.openyourmap.link/?q=44.54535,6.27617 with q=LATITUDE,LONGITUDE.
- * https://www.openyourmap.link/?q=WebSenso&ll=44.54535,6.27617 with q=QUERY STRING and ll=LATITUDE,LONGITUDE.
+ * https://www.openyourmap.link/?q=44.55451,6.25705 with q=LATITUDE,LONGITUDE.
+ * https://www.openyourmap.link/?q=WebSenso&ll=44.55451,6.25705 with q=QUERY STRING and ll=LATITUDE,LONGITUDE.
 
 ## Our instance live
 This script is hosted here www.openyourmap.link (offered by web agency www.WebSenso.com). Feel free to use it.
