@@ -1,4 +1,5 @@
 <?php
+
 $q = trim($_GET['q']);
 
 $protocol = isset($_SERVER['HTTPS']) && 
@@ -12,27 +13,24 @@ $description = ($lang === "fr") ? "Ouvrez votre lieu dans les applications carto
 ?><!DOCTYPE html>
 <html>
 <head>
-    <meta name="robots" content="noindex">
-    <meta http-equiv="cache-control" content="no-cache">
-    <meta http-equiv="expires" content="0">
-    <meta http-equiv="pragma" content="no-cache">
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <meta http-equiv = "refresh" content = "5; url = https://maps.apple.com/?q=<?= $q ?>" /> 
+	<meta name="robots" content="noindex">
+	<meta http-equiv="cache-control" content="no-cache">
+	<meta http-equiv="expires" content="0">
+	<meta http-equiv="pragma" content="no-cache">
+	<meta charset="utf-8"/>
+    	<meta name="viewport" content="width=device-width,initial-scale=1"/>
+	<meta http-equiv = "refresh" content = "5; url = https://maps.apple.com/?q=<?= $q ?>" />
 	<title><?= $title; ?> - OpenYourMap.link</title>
-    <meta name="description" content="Effortlessly connects your web-based content to native map apps on smartphones, enhancing user experience and simplifying navigation.">
-    <meta property="og:title" content="<?= $title; ?>"> 
-    <meta property="og:site_name" content="OpenYourMap.link">
-    
-    <meta property="og:video" content="<?= $base_url; ?>preview-video.mp4" />
+    	<meta name="description" content="Effortlessly connects your web-based content to native map apps on smartphones, enhancing user experience and simplifying navigation.">
+    	<meta property="og:title" content="<?= $title; ?>"> 
+    	<meta property="og:site_name" content="OpenYourMap.link">
+    	<meta property="og:video" content="<?= $base_url; ?>preview-video.mp4" />
 	<meta property="og:video:secure_url" content="<?= $base_url; ?>preview-video.mp4" />
 	<meta property="og:video:type" content="video.other" />
 	<meta property="og:video:width" content="1920" />
 	<meta property="og:video:height" content="1080" />
-    
 </head>
 <body>
-
 
 <script>
     function findGetParameter(parameterName) {
@@ -59,7 +57,7 @@ $description = ($lang === "fr") ? "Ouvrez votre lieu dans les applications carto
         return false;
     }
 
-	var os = navigator.platform;
+    var os = navigator.platform;
     var redirectUrl;
     var q = findGetParameter("q");
     var ll = findGetParameter("ll");
@@ -88,11 +86,13 @@ $description = ($lang === "fr") ? "Ouvrez votre lieu dans les applications carto
     }
 
     window.location.href = redirectUrl;
-	//document.write(redirectUrl);
+    //document.write(redirectUrl);
 
-	setTimeout(window.close, 3000);  // Fix for Apple Map on native app
+    setTimeout(window.close, 3000);  // Fix for Apple Map on native app
 
 </script>
-	<a href="https://maps.apple.com/?q=<?= $q ?>">Redirection...</a>
+
+<a href="https://maps.apple.com/?q=<?= $q ?>">Redirection...</a>
+
 </body>
 </html>>
