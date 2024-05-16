@@ -74,7 +74,7 @@ $description = ($lang === "fr") ? "Ouvrez votre lieu dans les applications carto
         redirectUrl = `https://www.google.com/maps/search/?api=1&query=${q}`;
         redirectUrl += ll ? `&center=${ll}` : "";
     } else {
-        redirectUrl = "https://www.qwant.com/maps/place/latlon:";
+        redirectUrl = "https://map.qwant.com/place/latlon:";
         if (ll) {
             latLongArray = getLatLong(ll);
         } else {
