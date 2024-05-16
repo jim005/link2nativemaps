@@ -1,0 +1,55 @@
+# Composer dependency directory
+/vendor/
+
+# Composer PHAR
+/composer.phar
+/composer.lock
+
+# PHPUnit result cache
+/phpunit.result.cache
+
+# Local development environment configuration files
+.env
+.env.local
+.env.*.local
+
+# PHPStorm project files
+/.idea/
+
+# MacOS files
+.DS_Store
+
+# Windows thumbnail cache files
+Thumbs.db
+
+# Linux temporary files
+*~
+
+# Log files
+*.log
+
+# Temporary files
+/tmp/
+/temp/
+/cache/
+
+# IDE configurations
+/.vscode/
+/nbproject/
+
+# Backup files
+*.bak
+*.swp
+
+# PHPUnit coverage results
+/coverage/
+
+# PHPunit test output files
+/test-output/
+
+# Node modules (if using Node for any reason)
+node_modules/
+
+# Generated files (e.g., docs, reports)
+docs/
+/reports/
