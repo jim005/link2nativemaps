@@ -7,7 +7,7 @@ $_SERVER['HTTPS'] === 'on' ? 'https://' : 'http://';
 $base_url = $protocol . $_SERVER['HTTP_HOST'] . '/';
 
 $lang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
-$title = ($lang === "fr") ? "📍C'est par ici !" : "📍It's over here!";
+$title = ($lang === "fr") ? "C'est par ici !" : "It's over here!";
 $description = ($lang === "fr") ? "Ouvrez votre lieu dans les applications cartographiques natives des smartphones, ce qui améliore l'expérience de l'utilisateur et simplifie la navigation." : "Open web-based content to native map apps on smartphones, enhancing user experience and simplifying navigation.";
 
 ?><!DOCTYPE html>
@@ -18,13 +18,13 @@ $description = ($lang === "fr") ? "Ouvrez votre lieu dans les applications carto
 	<meta http-equiv="expires" content="0">
 	<meta http-equiv="pragma" content="no-cache">
 	<meta charset="utf-8"/>
-    	<meta name="viewport" content="width=device-width,initial-scale=1"/>
-	<meta http-equiv = "refresh" content = "5; url = https://maps.apple.com/?q=<?= $q ?>" />
-	<title><?= $title; ?> - OpenYourMap.link</title>
-    	<meta name="description" content="Effortlessly connects your web-based content to native map apps on smartphones, enhancing user experience and simplifying navigation.">
-    	<meta property="og:title" content="<?= $title; ?>"> 
-    	<meta property="og:site_name" content="OpenYourMap.link">
-    	<meta property="og:video" content="<?= $base_url; ?>preview-video.mp4" />
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+<!--	<meta http-equiv = "refresh" content = "5; url = https://maps.apple.com/?q=<?= $q ?>" />  -->
+    <title><?= $title; ?> - OpenYourMap.link</title>
+    <meta name="description" content="Effortlessly connects your web-based content to native map apps on smartphones, enhancing user experience and simplifying navigation.">
+    <meta property="og:title" content="<?= $title; ?>"> 
+	<meta property="og:site_name" content="OpenYourMap.link">
+	<meta property="og:video" content="<?= $base_url; ?>preview-video.mp4" />
 	<meta property="og:video:secure_url" content="<?= $base_url; ?>preview-video.mp4" />
 	<meta property="og:video:type" content="video.other" />
 	<meta property="og:video:width" content="1920" />
@@ -64,7 +64,7 @@ $description = ($lang === "fr") ? "Ouvrez votre lieu dans les applications carto
     var url;
 
     if (!q || q === "") {
-        window.location.href = "https://www.qwant.com";
+        window.location.href = "https://www.openstreetmap.org/";
     }
 
     if (os.indexOf("iPhone") != -1 || os.indexOf("iPad") != -1 || os.indexOf("Mac") != -1) {
@@ -74,20 +74,22 @@ $description = ($lang === "fr") ? "Ouvrez votre lieu dans les applications carto
         redirectUrl = `https://www.google.com/maps/search/?api=1&query=${q}`;
         redirectUrl += ll ? `&center=${ll}` : "";
     } else {
-        redirectUrl = "https://map.qwant.com/place/latlon:";
+        redirectUrl = "https://www.openstreetmap.org/";
         if (ll) {
             latLongArray = getLatLong(ll);
         } else {
             latLongArray = getLatLong(q);
         }
         if (latLongArray) {
-            redirectUrl += `${latLongArray[0].toFixed(5)}:${latLongArray[1].toFixed(5)}`;
+        	var lat = latLongArray[0].toFixed(5);
+        	var lon = latLongArray[1].toFixed(5);
+        	redirectUrl += "?mlat=" + lat + "&mlon=" + lon + "#map=15/" + lat + "/" + lon;
         }
     }
 
+	//console.log(os);
     window.location.href = redirectUrl;
-    //document.write(redirectUrl);
-
+   // console.log(redirectUrl); 
     setTimeout(window.close, 3000);  // Fix for Apple Map on native app
 
 </script>
